@@ -1,23 +1,36 @@
-# Python Hello
+# StreamLoop churn model tuning
 
-The most basic boilerplate to start a Python project at 4Geeks is to start your very first Python project from scratch.
+This project tunes a logistic regression model that flags customers who may cancel. The full experiment is in `streamloop_churn_tuning.ipynb`. The short decision note is in `tuning_report.md`.
 
-## What to do next?
+## Setup
 
-Open the `main.py` file and start writing your code.
-
-Execute your code by typing the following command on your terminal:
+From this folder:
 
 ```bash
-$ python main.py
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m ipykernel install --sys-prefix --name streamloop-churn --display-name "Python (streamloop churn)"
 ```
 
-You can create and include as many python files (a.k.a. modules) as you want using the import statements.
+## Run the notebook
 
-## Requirements
+Open it:
 
-Make sure you have Python installed in your computer. We strongly recommend [installing Python through Pyenv ](https://4geeks.com/how-to/what-is-pyenv-and-how-to-install-pyenv) to avoid version conflicts in the future.
+```bash
+jupyter notebook streamloop_churn_tuning.ipynb
+```
 
-### Contributors
+Or run every cell from top to bottom:
 
-This template was built as part of the [4Geeks Python Resources](https://4geeks.com/technology/python) for learning at [4Geeks.com](https://4geeks.com) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and [many other contributors](https://github.com/4GeeksAcademy/python-hello/graphs/contributors).
+```bash
+jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=600 --ExecutePreprocessor.kernel_name=streamloop-churn streamloop_churn_tuning.ipynb
+```
+
+The notebook downloads the customer table from the internet when it runs. Run it from this folder so it can import `preprocess.py`.
+
+## Check the cleaner
+
+```bash
+python -m unittest test_preprocess.py
+```

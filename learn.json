@@ -1,11 +1,11 @@
 {
   "title": {
-    "en": "Python Starter Template for Beginners",
-    "es": "Plantilla Inicial de Python para Principiantes"
+    "en": "StreamLoop Churn Model Tuning",
+    "es": "Ajuste del modelo de cancelación de StreamLoop"
   },
   "description": {
-    "en": "This is a starter template for Python projects. It includes a basic folder structure, a sample Python file, and instructions to kickstart your project.",
-    "es": "Esta es una plantilla inicial para proyectos de Python. Incluye una estructura básica de carpetas, un archivo Python de ejemplo y instrucciones para iniciar tu proyecto."
+    "en": "Tune a customer-churn classifier with a broad search and then a focused search, and compare it with a default model.",
+    "es": "Ajusta un clasificador de cancelación de clientes con una búsqueda amplia y luego una búsqueda enfocada, y compáralo con un modelo por defecto."
   },
   "repository": "https://github.com/4geeksacademy/python-hello",
   "preview": "",
